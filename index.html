@@ -3,11 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML + CSS Project</title>
+  <title>Delicious Bites 🍽️</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello from HTML + CSS Project 🚀</h1>
-  <p>This is a demo project.</p>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Delicious Bites</div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Welcome to Delicious Bites</h1>
+      <p>Experience the best flavors in town</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-card">
+        <img src="images/pasta.jpg" alt="Pasta">
+        <h3>Pasta</h3>
+        <p>Creamy Alfredo with fresh herbs</p>
+        <span>$12</span>
+      </div>
+      <div class="menu-card">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>Juicy beef with melted cheese</p>
+        <span>$10</span>
+      </div>
+      <div class="menu-card">
+        <img src="images/pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>Wood-fired with fresh toppings</p>
+        <span>$15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.497168282827!2d36.8172239!3d-1.2920659"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Delicious Bites. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    }));
+  </script>
 </body>
 </html>
