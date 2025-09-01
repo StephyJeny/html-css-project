@@ -3,87 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delicious Bites 🍽️</title>
+  <title>Delicious Bites 🍴</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Delicious Bites</div>
-    <nav class="nav-menu">
-      <ul>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Delicious Bites</div>
+      <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
+        <li><a href="#special">Special</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reservations">Reservations</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <div class="theme-toggle" id="theme-toggle">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </div>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
   </header>
 
   <!-- Hero Section -->
   <section id="hero">
     <div class="hero-content">
       <h1>Welcome to Delicious Bites</h1>
-      <p>Experience the best flavors in town</p>
-      <a href="#menu" class="btn">Explore Menu</a>
+      <p>Experience flavors that make you smile.</p>
+      <a href="#menu" class="btn">View Menu</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Family-owned since 1990, we serve authentic Italian cuisine made with fresh, local ingredients.</p>
+    <p>At Delicious Bites, we serve fresh and flavorful dishes made with love. Our passion is to bring people together through food.</p>
+    
+    <!-- Chef Image -->
+    <div class="chef-image-container">
+      <img src="images/chef.jpg" alt="Our Head Chef" class="chef-image">
+      <p class="chef-caption">Chef Marco - Our passionate head chef with 20+ years of culinary experience</p>
     </div>
   </section>
 
   <!-- Menu Section -->
-  <section id="menu">
+  <section id="menu" class="section">
     <h2>Our Menu</h2>
     <div class="menu-grid">
-      <div class="menu-card">
-        <img src="images/pasta.jpg" alt="Pasta">
-        <h3>Pasta</h3>
-        <p>Creamy Alfredo with fresh herbs</p>
-        <span>$12</span>
-      </div>
-      <div class="menu-card">
-        <img src="images/burger.jpg" alt="Burger">
-        <h3>Burger</h3>
-        <p>Juicy beef with melted cheese</p>
-        <span>$10</span>
-      </div>
-      <div class="menu-card">
+      <div class="menu-item">
         <img src="images/pizza.jpg" alt="Pizza">
-        <h3>Pizza</h3>
-        <p>Wood-fired with fresh toppings</p>
-        <span>$15</span>
+        <h3>Classic Pizza</h3>
+        <p>$12</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Cheese Burger</h3>
+        <p>$10</p>
+      </div>
+      <div class="menu-item">
+        <img src="images/pasta.jpg" alt="Pasta">
+        <h3>Fettuccine Pasta</h3>
+        <p>$14</p>
       </div>
     </div>
   </section>
 
+  <!-- Special of the Day -->
+  <section id="special" class="section special">
+    <h2>🌟 Special of the Day</h2>
+    <p>Try our chef's signature **Spicy BBQ Pizza** – only $15 today!</p>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials">
+      <blockquote>"Best food in town, always fresh and tasty!" – Sarah</blockquote>
+      <blockquote>"Amazing atmosphere and friendly staff." – John</blockquote>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>📸 Our Gallery</h2>
+    <div class="gallery-grid">
+      <img src="images/gallery1.jpg" alt="Restaurant Interior 1">
+      <img src="images/gallery2.jpg" alt="Restaurant Interior 2">
+      <img src="images/gallery3.jpg" alt="Restaurant Interior 3">
+      <img src="images/gallery4.jpg" alt="Restaurant Interior 4">
+      <img src="images/gallery5.jpg" alt="Delicious Dish 1">
+      <img src="images/gallery6.jpg" alt="Delicious Dish 2">
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservations" class="section reservation-section">
+    <h2>🍽️ Make a Reservation</h2>
+    <p>Book your table for an unforgettable dining experience!</p>
+    <form class="reservation-form">
+      <div class="form-row">
+        <input type="text" id="res-name" placeholder="Your Name" required>
+        <input type="email" id="res-email" placeholder="Your Email" required>
+      </div>
+      <div class="form-row">
+        <input type="date" id="res-date" required>
+        <input type="time" id="res-time" required>
+      </div>
+      <div class="form-row">
+        <select id="res-guests" required>
+          <option value="">Number of Guests</option>
+          <option value="1">1 Guest</option>
+          <option value="2">2 Guests</option>
+          <option value="3">3 Guests</option>
+          <option value="4">4 Guests</option>
+          <option value="5">5 Guests</option>
+          <option value="6">6 Guests</option>
+          <option value="7">7 Guests</option>
+          <option value="8">8+ Guests</option>
+        </select>
+        <input type="tel" id="res-phone" placeholder="Phone Number" required>
+      </div>
+      <textarea id="res-notes" placeholder="Special requests or dietary requirements (optional)"></textarea>
+      <button type="submit" class="btn reservation-btn">Reserve Table</button>
+    </form>
+    <div id="reservation-status" class="form-status"></div>
+  </section>
+
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
     <form class="contact-form">
       <input type="text" placeholder="Your Name" required>
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn">Send</button>
     </form>
+    <p>📍 Location: 123 Food Street, Nairobi</p>
     <div class="map">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.497168282827!2d36.8172239!3d-1.2920659"
+        src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
         width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
       </iframe>
     </div>
   </section>
 
+  <!-- Opening Hours -->
+  <section class="section">
+    <h2>Opening Hours</h2>
+    <p>Mon - Fri: 10am - 10pm</p>
+    <p>Sat - Sun: 12pm - 11pm</p>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <h3>📧 Stay Updated!</h3>
+      <p>Subscribe to our newsletter for special offers, new menu items, and exclusive events!</p>
+      <form class="newsletter-form">
+        <div class="newsletter-input-group">
+          <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+          <button type="submit" class="btn newsletter-btn">Subscribe</button>
+        </div>
+      </form>
+      <div id="newsletter-status" class="form-status"></div>
+      <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Delicious Bites. All Rights Reserved.</p>
+    <p>&copy; 2025 Delicious Bites | Follow us:</p>
+    <div class="socials">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </div>
   </footer>
 
   <script>
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+    const navMenu = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
@@ -91,10 +200,91 @@
     });
 
     // Close menu when clicking on a link
-    document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+    document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
     }));
+    // Reservation form handling
+    document.querySelector('.reservation-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const statusDiv = document.getElementById('reservation-status');
+      const formData = {
+        name: document.getElementById('res-name').value,
+        email: document.getElementById('res-email').value,
+        date: document.getElementById('res-date').value,
+        time: document.getElementById('res-time').value,
+        guests: document.getElementById('res-guests').value,
+        phone: document.getElementById('res-phone').value,
+        notes: document.getElementById('res-notes').value
+      };
+      
+      // Show success message
+      statusDiv.className = 'form-status success';
+      statusDiv.textContent = `Thank you ${formData.name}! Your reservation for ${formData.guests} guests on ${formData.date} at ${formData.time} has been received. We'll confirm via email shortly.`;
+      
+      // Reset form
+      this.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 5000);
+    });
+
+    // Newsletter form handling
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const statusDiv = document.getElementById('newsletter-status');
+      const email = document.getElementById('newsletter-email').value;
+      
+      // Show success message
+      statusDiv.className = 'form-status success';
+      statusDiv.textContent = `🎉 Thank you! ${email} has been subscribed to our newsletter.`;
+      
+      // Reset form
+      this.reset();
+      
+      // Hide message after 4 seconds
+      setTimeout(() => {
+        statusDiv.style.display = 'none';
+      }, 4000);
+    });
+    
+    // Theme Toggle Functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply the saved theme on page load
+    if (currentTheme === 'dark') {
+      body.setAttribute('data-theme', 'dark');
+    }
+    
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = body.getAttribute('data-theme');
+      
+      if (currentTheme === 'dark') {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      
+      // Add a subtle animation effect
+      themeToggle.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        themeToggle.style.transform = 'scale(1)';
+      }, 150);
+    });
+    
+    // Smooth transition on theme change
+    body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
   </script>
 </body>
 </html>
