@@ -4,22 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delicious Bites 🍴</title>
+  <!-- Google Fonts for modern typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navigation -->
   <header>
-    <nav class="navbar">
+    <nav class="navbar animate-slide-down">
       <div class="logo">Delicious Bites</div>
       <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#special">Special</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reservations">Reservations</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#menu" class="nav-item">Menu</a></li>
+        <li><a href="#special" class="nav-item">Special</a></li>
+        <li><a href="#testimonials" class="nav-item">Testimonials</a></li>
+        <li><a href="#gallery" class="nav-item">Gallery</a></li>
+        <li><a href="#reservations" class="nav-item">Reservations</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
       </ul>
       <div class="theme-toggle" id="theme-toggle">
         <span class="sun-icon">☀️</span>
@@ -34,158 +38,318 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h1>Welcome to Delicious Bites</h1>
-      <p>Experience flavors that make you smile.</p>
-      <a href="#menu" class="btn">View Menu</a>
+  <section id="hero" class="hero-section">
+    <div class="hero-content animate-fade-in-up">
+      <h1 class="hero-title">Welcome to Delicious Bites</h1>
+      <p class="hero-subtitle">Experience flavors that make you smile.</p>
+      <a href="#menu" class="btn btn-primary animate-bounce-in">View Menu</a>
+    </div>
+    <div class="hero-decoration">
+      <div class="floating-card card-1"></div>
+      <div class="floating-card card-2"></div>
+      <div class="floating-card card-3"></div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Family-owned since 1990, we serve authentic Italian cuisine made with fresh, local ingredients.</p>
-    <p>At Delicious Bites, we serve fresh and flavorful dishes made with love. Our passion is to bring people together through food.</p>
-    
-    <!-- Chef Image -->
-    <div class="chef-image-container">
-      <img src="images/chef.jpg" alt="Our Head Chef" class="chef-image">
-      <p class="chef-caption">Chef Marco - Our passionate head chef with 20+ years of culinary experience</p>
+  <section id="about" class="section animate-on-scroll">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <div class="about-content">
+        <div class="about-text animate-slide-in-left">
+          <p>Family-owned since 1990, we serve authentic Italian cuisine made with fresh, local ingredients.</p>
+          <p>At Delicious Bites, we serve fresh and flavorful dishes made with love. Our passion is to bring people together through food.</p>
+        </div>
+        
+        <!-- Chef Card -->
+        <div class="chef-card animate-slide-in-right">
+          <div class="card-image">
+            <img src="images/chef.jpg" alt="Our Head Chef" class="chef-image">
+          </div>
+          <div class="card-content">
+            <h3>Chef Marco</h3>
+            <p class="chef-title">Head Chef</p>
+            <p class="chef-description">Our passionate head chef with 20+ years of culinary experience</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Menu Section -->
-  <section id="menu" class="section">
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="images/pizza.jpg" alt="Pizza">
-        <h3>Classic Pizza</h3>
-        <p>$12</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/burger.jpg" alt="Burger">
-        <h3>Cheese Burger</h3>
-        <p>$10</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/pasta.jpg" alt="Pasta">
-        <h3>Fettuccine Pasta</h3>
-        <p>$14</p>
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <h2 class="section-title animate-fade-in">Our Menu</h2>
+      <div class="menu-grid">
+        <div class="menu-card animate-card" data-delay="0">
+          <div class="card-image-wrapper">
+            <img src="images/pizza.jpg" alt="Pizza" class="card-image">
+            <div class="card-overlay">
+              <span class="card-badge">Popular</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Classic Pizza</h3>
+            <p class="card-description">Fresh mozzarella, tomato sauce, and basil</p>
+            <div class="card-footer">
+              <span class="price">$12</span>
+              <button class="btn btn-sm btn-outline">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card animate-card" data-delay="100">
+          <div class="card-image-wrapper">
+            <img src="images/burger.jpg" alt="Burger" class="card-image">
+            <div class="card-overlay">
+              <span class="card-badge">Chef's Choice</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Cheese Burger</h3>
+            <p class="card-description">Juicy beef patty with aged cheddar</p>
+            <div class="card-footer">
+              <span class="price">$10</span>
+              <button class="btn btn-sm btn-outline">Order Now</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu-card animate-card" data-delay="200">
+          <div class="card-image-wrapper">
+            <img src="images/pasta.jpg" alt="Pasta" class="card-image">
+            <div class="card-overlay">
+              <span class="card-badge">New</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Fettuccine Pasta</h3>
+            <p class="card-description">Creamy alfredo sauce with fresh herbs</p>
+            <div class="card-footer">
+              <span class="price">$14</span>
+              <button class="btn btn-sm btn-outline">Order Now</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Special of the Day -->
-  <section id="special" class="section special">
-    <h2>🌟 Special of the Day</h2>
-    <p>Try our chef's signature **Spicy BBQ Pizza** – only $15 today!</p>
+  <section id="special" class="section special-section">
+    <div class="container">
+      <div class="special-card animate-pulse">
+        <div class="special-icon">🌟</div>
+        <h2>Special of the Day</h2>
+        <p>Try our chef's signature <strong>Spicy BBQ Pizza</strong> – only $15 today!</p>
+        <button class="btn btn-primary">Order Special</button>
+      </div>
+    </div>
   </section>
 
   <!-- Testimonials -->
-  <section id="testimonials" class="section">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonials">
-      <blockquote>"Best food in town, always fresh and tasty!" – Sarah</blockquote>
-      <blockquote>"Amazing atmosphere and friendly staff." – John</blockquote>
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <h2 class="section-title animate-fade-in">What Our Customers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card animate-card" data-delay="0">
+          <div class="testimonial-content">
+            <div class="quote-icon">"</div>
+            <p>"Best food in town, always fresh and tasty!"</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <h4>Sarah Johnson</h4>
+              <span>Regular Customer</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card animate-card" data-delay="100">
+          <div class="testimonial-content">
+            <div class="quote-icon">"</div>
+            <p>"Amazing atmosphere and friendly staff."</p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <h4>John Smith</h4>
+              <span>Food Enthusiast</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Gallery Section -->
-  <section id="gallery" class="gallery">
-    <h2>📸 Our Gallery</h2>
-    <div class="gallery-grid">
-      <img src="images/gallery1.jpg" alt="Restaurant Interior 1">
-      <img src="images/gallery2.jpg" alt="Restaurant Interior 2">
-      <img src="images/gallery3.jpg" alt="Restaurant Interior 3">
-      <img src="images/gallery4.jpg" alt="Restaurant Interior 4">
-      <img src="images/gallery5.jpg" alt="Delicious Dish 1">
-      <img src="images/gallery6.jpg" alt="Delicious Dish 2">
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="section-title animate-fade-in">📸 Our Gallery</h2>
+      <div class="gallery-grid">
+        <div class="gallery-card animate-card" data-delay="0">
+          <img src="images/gallery1.jpg" alt="Restaurant Interior 1">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Cozy Interior</span>
+          </div>
+        </div>
+        <div class="gallery-card animate-card" data-delay="50">
+          <img src="images/gallery2.jpg" alt="Restaurant Interior 2">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Private Dining</span>
+          </div>
+        </div>
+        <div class="gallery-card animate-card" data-delay="100">
+          <img src="images/gallery3.jpg" alt="Restaurant Interior 3">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Main Hall</span>
+          </div>
+        </div>
+        <div class="gallery-card animate-card" data-delay="150">
+          <img src="images/gallery4.jpg" alt="Restaurant Interior 4">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Bar Area</span>
+          </div>
+        </div>
+        <div class="gallery-card animate-card" data-delay="200">
+          <img src="images/gallery5.jpg" alt="Delicious Dish 1">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Signature Dish</span>
+          </div>
+        </div>
+        <div class="gallery-card animate-card" data-delay="250">
+          <img src="images/gallery6.jpg" alt="Delicious Dish 2">
+          <div class="gallery-overlay">
+            <span class="gallery-title">Fresh Ingredients</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Reservation Section -->
   <section id="reservations" class="section reservation-section">
-    <h2>🍽️ Make a Reservation</h2>
-    <p>Book your table for an unforgettable dining experience!</p>
-    <form class="reservation-form">
-      <div class="form-row">
-        <input type="text" id="res-name" placeholder="Your Name" required>
-        <input type="email" id="res-email" placeholder="Your Email" required>
+    <div class="container">
+      <div class="reservation-card animate-scale-in">
+        <h2 class="section-title">🍽️ Make a Reservation</h2>
+        <p>Book your table for an unforgettable dining experience!</p>
+        <form class="reservation-form">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="res-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="res-email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="date" id="res-date" required>
+            </div>
+            <div class="form-group">
+              <input type="time" id="res-time" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <select id="res-guests" required>
+                <option value="">Number of Guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8+ Guests</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="res-phone" placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea id="res-notes" placeholder="Special requests or dietary requirements (optional)"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Reserve Table</button>
+        </form>
+        <div id="reservation-status" class="form-status"></div>
       </div>
-      <div class="form-row">
-        <input type="date" id="res-date" required>
-        <input type="time" id="res-time" required>
-      </div>
-      <div class="form-row">
-        <select id="res-guests" required>
-          <option value="">Number of Guests</option>
-          <option value="1">1 Guest</option>
-          <option value="2">2 Guests</option>
-          <option value="3">3 Guests</option>
-          <option value="4">4 Guests</option>
-          <option value="5">5 Guests</option>
-          <option value="6">6 Guests</option>
-          <option value="7">7 Guests</option>
-          <option value="8">8+ Guests</option>
-        </select>
-        <input type="tel" id="res-phone" placeholder="Phone Number" required>
-      </div>
-      <textarea id="res-notes" placeholder="Special requests or dietary requirements (optional)"></textarea>
-      <button type="submit" class="btn reservation-btn">Reserve Table</button>
-    </form>
-    <div id="reservation-status" class="form-status"></div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
-    <p>📍 Location: 123 Food Street, Nairobi</p>
-    <div class="map">
-      <iframe 
-        src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
     </div>
   </section>
 
-  <!-- Opening Hours -->
-  <section class="section">
-    <h2>Opening Hours</h2>
-    <p>Mon - Fri: 10am - 10pm</p>
-    <p>Sat - Sun: 12pm - 11pm</p>
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title animate-fade-in">Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-form-wrapper animate-slide-in-left">
+          <form class="contact-form">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="contact-info animate-slide-in-right">
+          <div class="info-card">
+            <h3>📍 Location</h3>
+            <p>123 Food Street, Nairobi</p>
+          </div>
+          <div class="info-card">
+            <h3>⏰ Opening Hours</h3>
+            <p>Mon - Fri: 10am - 10pm</p>
+            <p>Sat - Sun: 12pm - 11pm</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="map-wrapper animate-fade-in-up">
+        <div class="map">
+          <iframe 
+            src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Newsletter Section -->
   <section class="newsletter-section">
-    <div class="newsletter-container">
-      <h3>📧 Stay Updated!</h3>
-      <p>Subscribe to our newsletter for special offers, new menu items, and exclusive events!</p>
-      <form class="newsletter-form">
-        <div class="newsletter-input-group">
-          <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
-          <button type="submit" class="btn newsletter-btn">Subscribe</button>
-        </div>
-      </form>
-      <div id="newsletter-status" class="form-status"></div>
-      <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+    <div class="container">
+      <div class="newsletter-card animate-scale-in">
+        <h3>📧 Stay Updated!</h3>
+        <p>Subscribe to our newsletter for special offers, new menu items, and exclusive events!</p>
+        <form class="newsletter-form">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletter-email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary newsletter-btn">Subscribe</button>
+          </div>
+        </form>
+        <div id="newsletter-status" class="form-status"></div>
+        <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Delicious Bites | Follow us:</p>
-    <div class="socials">
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">Twitter</a>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Delicious Bites | Follow us:</p>
+      <div class="socials">
+        <a href="#" class="social-link">Facebook</a>
+        <a href="#" class="social-link">Instagram</a>
+        <a href="#" class="social-link">Twitter</a>
+      </div>
     </div>
   </footer>
 
@@ -204,6 +368,32 @@
       hamburger.classList.remove('active');
       navMenu.classList.remove('active');
     }));
+
+    // Framer Motion-like scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all animated elements
+    document.querySelectorAll('.animate-on-scroll, .animate-card, .animate-fade-in, .animate-slide-in-left, .animate-slide-in-right, .animate-scale-in, .animate-fade-in-up').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Staggered animations for cards
+    document.querySelectorAll('.animate-card').forEach((card, index) => {
+      const delay = card.dataset.delay || index * 100;
+      card.style.animationDelay = `${delay}ms`;
+    });
+
     // Reservation form handling
     document.querySelector('.reservation-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -219,8 +409,8 @@
         notes: document.getElementById('res-notes').value
       };
       
-      // Show success message
-      statusDiv.className = 'form-status success';
+      // Show success message with animation
+      statusDiv.className = 'form-status success animate-fade-in';
       statusDiv.textContent = `Thank you ${formData.name}! Your reservation for ${formData.guests} guests on ${formData.date} at ${formData.time} has been received. We'll confirm via email shortly.`;
       
       // Reset form
@@ -239,8 +429,8 @@
       const statusDiv = document.getElementById('newsletter-status');
       const email = document.getElementById('newsletter-email').value;
       
-      // Show success message
-      statusDiv.className = 'form-status success';
+      // Show success message with animation
+      statusDiv.className = 'form-status success animate-fade-in';
       statusDiv.textContent = `🎉 Thank you! ${email} has been subscribed to our newsletter.`;
       
       // Reset form
@@ -282,9 +472,12 @@
         themeToggle.style.transform = 'scale(1)';
       }, 150);
     });
-    
-    // Smooth transition on theme change
-    body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+
+    // Floating cards animation in hero
+    const floatingCards = document.querySelectorAll('.floating-card');
+    floatingCards.forEach((card, index) => {
+      card.style.animationDelay = `${index * 0.5}s`;
+    });
   </script>
 </body>
 </html>
